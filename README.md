@@ -1,4 +1,4 @@
-# codes
+# TNF_Knock_out
  simulation for non-oscillation NFkB signal in TNF-/- in repsonse to TNF
 ( ignore update.sh. this is for updating the codes in lib which comes from other projects)
 
