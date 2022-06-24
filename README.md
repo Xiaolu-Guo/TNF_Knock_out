@@ -6,11 +6,11 @@ Simulation for non-oscillation NFkB signal in TNF-/- in repsonse to TNF.
 
 [Step 2]: In matlab, CHANGE the current folder to 'TNF_Knock_our'(or the folder where 'run_me.m' is in). 
 
-Step 2.1 (Optional) : One can set different values of the variables run_, draw_ to control which task should be done.
+    Step 2.1 (Optional) : One can set different values of the variables run_, draw_ to control which task should be done.
 
-Step 2.2 (Optional) : One can set different simulation size (10 cells is simulated by default) through changing the value of 'Num_sample'.
+    Step 2.2 (Optional) : One can set different simulation size (10 cells is simulated by default) through changing the value of 'Num_sample'.
 
-Step 2.3 (Optional) : change the data/figure saving location by changing the value of 'data_save_file_path' and 'fig_save_path'.
+    Step 2.3 (Optional) : change the data/figure saving location by changing the value of 'data_save_file_path' and 'fig_save_path'.
 
 [Step 3]: Run 'run_me.m' to get all the simulation and results.
 
