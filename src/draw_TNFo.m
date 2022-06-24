@@ -82,27 +82,27 @@ for i_para_name = 1:length(gene_info.parameter_name_vec)
     
     %% draw the picture and save
     
-    if 0 %
+    if 1 %
         draw_osc_ratio_bar([1,2,3],colors,metrics,data)
         
         figure(1)
         saveas(gcf,strcat(fig_save_path,fig_save_name,'_heatmap_byospower'),'epsc')
-        saveas(gcf,strcat(fig_save_path,fig_save_name,'_heatmap_byospower'),'svg')
+        saveas(gcf,strcat(fig_save_path,fig_save_name,'_heatmap_byospower'),'fig')
         close
         
         figure(2)
         saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage_diff_thresh'),'epsc')
-        saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage_diff_thresh'),'svg')
+        saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage_diff_thresh'),'fig')
         close
         %
         figure(3)
         saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage'),'epsc')
-        saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage'),'svg')
+        saveas(gcf,strcat(fig_save_path,fig_save_name,'_oscpercentage'),'fig')
         close
         
     end
     
-    if 1 %
+    if 0 %
         draw_traj_heatmap([1,2],traj_wt,traj_tnfo)
         
         figure(1)
@@ -138,22 +138,22 @@ for i_para_name = 1:length(gene_info.parameter_name_vec)
         
     end
     fig_num =1 ;
-    if 0 %IKK
+    if 1 %IKK
         
         
         
         draw_IKK(fig_num,colors,IKK_wt,IKK_tnfo)
         figure(fig_num)
         saveas(gcf,strcat(fig_save_path,fig_save_name,'_IKK'),'epsc')
-        saveas(gcf,strcat(fig_save_path,fig_save_name,'_IKK'),'svg')
+        saveas(gcf,strcat(fig_save_path,fig_save_name,'_IKK'),'fig')
         close
     end
     
-    if 0 %TNFR
+    if 1 %TNFR
         draw_TNFR(fig_num,colors,TNFR_wt,TNFR_tnfo)
         figure(fig_num)
         saveas(gcf,strcat(fig_save_path,fig_save_name,'_tnfr'),'epsc')
-        saveas(gcf,strcat(fig_save_path,fig_save_name,'_tnfr'),'svg')
+        saveas(gcf,strcat(fig_save_path,fig_save_name,'_tnfr'),'fig')
         close
         
     end
@@ -251,7 +251,7 @@ for i_osratio = 1:size(osc_ratio,2)
         ytlable{i_yt} = '';
     end
     ax = gca;
-    ax.YGrid = 'on';
+    % ax.YGrid = 'on';
     %     ylabel('Osc ratio')
     set(gca,'YTickLabel',ytlable,'XTickLabel',{'',''})
     %     set(gca,'fontsize',7,'fontweight','b')
@@ -263,7 +263,7 @@ Set_figure_size_square
 
 figure(fig_num(3))
 
-i_osratio = ceil(size(osc_ratio,2)/2);
+i_osratio = ceil(4);
 b=bar(osc_ratio(:,i_osratio)*100);
 %xlabel()
 b.FaceColor = 'flat';
@@ -279,7 +279,7 @@ for i_yt = 1:length(yt)
     ytlable{i_yt} = '';
 end
 ax = gca;
-ax.YGrid = 'on';
+% ax.YGrid = 'on';
 set(gca,'YTickLabel',ytlable,'XTickLabel',{'',''})
 Set_figure_size_square
 end
@@ -392,7 +392,7 @@ end
 
 end
 
-%%     draw IKK
+%% draw IKK
 function [] = draw_IKK(fig_num,colors,IKK_wt,IKK_tnfo)
 
 figure(fig_num)
@@ -443,7 +443,7 @@ for i_yt = 1:length(yt)
     ytlable{i_yt} = '';
 end
 ax = gca;
-ax.YGrid ='on';
+% ax.YGrid ='on';
 %     ylabel('Osc ratio')
 set(gca,'YTickLabel',ytlable,'XTickLabel',{'',''})
 set(gca,'fontsize',7,'fontweight','b')

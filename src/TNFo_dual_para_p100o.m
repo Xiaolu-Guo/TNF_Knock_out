@@ -1,5 +1,5 @@
 % TNFo_dual_para_sample_main
-function [] = TNFo_dual_para_p100o(vers,data_save_file_path,Num_sample)
+function [] = TNFo_dual_para_p100o(vers,data_save_file_path,Num_sample,NFkB_fold)
 
 data_info.save_file_path = data_save_file_path;
 
@@ -50,12 +50,12 @@ sim_info.ligand = {'TNF'};
 sim_info.dose_str = {'10ng/mL'};
 sim_info.dose_val = {10};
 sim_info.species_vec.name = {'NFkB'};
-sim_info.species_vec.val = {0.08*10^0.1};
+sim_info.species_vec.val = {0.08*NFkB_fold};%*1.25
 
 % species that will be saved
 % must be r x 1, for each cell i must be ri x 1
-data_info.species_outputname = {'nucNFkB';'TNFR';'IKK'};
-data_info.species_composition = {{'NFkBn';'IkBaNFkBn'};{'TNFR'};{'IKK'}};
+data_info.species_outputname = {'nucNFkB';'TNFR';'IKK';'IkBat'};
+data_info.species_composition = {{'NFkBn';'IkBaNFkBn'};{'TNFR'};{'IKK'};{'IkBat'}};
 data_info.save_file_name = strcat('tnfo_dual_para_sample_',vers); % only beginning, no .mat
 
 genotype_sim_save(sim_info,data_info,gene_info);
