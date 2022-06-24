@@ -4,7 +4,7 @@ Simulation for non-oscillation NFkB signal in TNF-/- in repsonse to TNF.
 
 [Step 1]: Download the whole folder to local.
 
-[Step 2]: In matlab, CHANGE the current folder to 'TNF_Knock_our'(or the folder where 'run_me.m' is in). 
+[Step 2]: In matlab, CHANGE the current folder to 'TNF_Knock_our'(or the folder in which 'run_me.m' is). 
 
 Step 2.1 (Optional) : One can set different values of the variables run_, draw_ to control which task should be done. For example:
 
