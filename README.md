@@ -1,5 +1,6 @@
 # TNF_Knock_out
-Simulation for non-oscillation NFkB signal in TNF-/- in repsonse to TNF
+Simulation for non-oscillation NFkB signal in TNF-/- in repsonse to TNF.
+(The codes are tested in Matlab R2020a)
 
 Step 1. Download the whole folder to local.
 
